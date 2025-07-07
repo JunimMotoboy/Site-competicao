@@ -67,7 +67,7 @@ nav li a:hover {
 }
 
 .section1 {
-  background-image: url("/imgs/fragpunk-game-art-5120x2880-21587.jpg");
+  background-image: url("imgs/fragpunk-game-art-5120x2880-21587.jpg");
 }
 
 .section2 {
@@ -87,7 +87,7 @@ nav li a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("/imgs/fragpunk-5k-2024-5120x2880-18291.jpg");
+  background-image: url("imgs/fragpunk-5k-2024-5120x2880-18291.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
