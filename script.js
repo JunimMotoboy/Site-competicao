@@ -1,7 +1,7 @@
 const characters = [
   {
     name: "Axon",
-    img: "/imgs/Axon.png",
+    img: "imgs/Axon.png",
     info: "Especialista em tecnologia alienígena.",
     skills: ["Campo de Força", "Disparo de Plasma", "Drone Reparador"]
   },
