@@ -13,7 +13,6 @@ body {
   background-color: #000;
 }
 
-/* HEADER */
 header {
   background-color: #000;
   height: 75px;
@@ -44,7 +43,7 @@ nav ul {
 nav li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: hsl(300, 94%, 46%);
+  color: hsl(120, 100%, 50%);
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -152,7 +151,7 @@ nav li a:hover {
   transform: scale(1.1) skew(-12deg);
   opacity: 1;
   z-index: 10;
-  border-color: hsl(120, 100%, 50%);
+ 
 }
 
 .character-card .name {
@@ -167,6 +166,30 @@ nav li a:hover {
   padding: 4px 8px;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+}
+
+/* Info Button */
+.info-button {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid hsl(120, 100%, 50%);
+  color: hsl(120, 100%, 50%);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.info-button:hover {
+  background: hsl(120, 97%, 57%);
+  color: #000;
+  transform: scale(1.1);
 }
 
 /* ARROWS */
@@ -195,28 +218,78 @@ nav li a:hover {
 /* MODAL */
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.8);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
 }
 
 .modal-content {
-  background: white;
+  background: #121212;
+  border: 2px solid #00fff2;
+  border-radius: 12px;
   padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  color: #111;
-  font-family: "Roboto", sans-serif;
+  max-width: 500px;
+  width: 90%;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
   position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: left;
 }
 
 .close-modal {
-  display: none;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #00fff2;
+  cursor: pointer;
+  transition: 0.2s;
+  display: block;
+}
+
+.close-modal:hover {
+  color: #ff0044;
+  transform: scale(1.2);
+}
+
+.modal-content h2 {
+  color: #00fff2;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+#modal-skills {
+  list-style-type: square;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+#modal-skills li {
+  margin-bottom: 5px;
+  color: #00ffee;
+  transition: 0.2s ease;
+}
+
+#modal-skills li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* VIDEO */
@@ -234,6 +307,7 @@ nav li a:hover {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
+
 .jogar-agora {
   display: inline-block;
   margin-top: 25px;
@@ -248,4 +322,111 @@ nav li a:hover {
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
+}
+.section3 {
+  background-color: #0a0a0a;
+  flex-direction: column;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.game-details-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.section3 h2 {
+  color: hsl(120, 100%, 50%);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section3 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.features li {
+  font-size: 1rem;
+  padding: 8px 0;
+  color: #90ee90;
+}
+@media (max-width: 768px) {
+  nav ul {
+    gap: 30px;
+  }
+
+  .character-carousel {
+    padding: 0 10px;
+  }
+
+  .character-card {
+    width: 110px;
+    height: 220px;
+  }
+
+  .character-card .name {
+    font-size: 16px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .jogar-agora {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .section3 h2 {
+    font-size: 1.8rem;
+  }
+
+  .section3 p {
+    font-size: 1rem;
+  }
+
+  .features li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img-top img {
+    height: 30px;
+    width: 60px;
+  }
+
+  .trailer-video {
+    width: 100%;
+  }
+
+  .game-details-container {
+    padding: 20px;
+  }
+  
 }
